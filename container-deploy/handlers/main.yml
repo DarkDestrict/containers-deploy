@@ -1,0 +1,12 @@
+---
+# handlers file for container-deploy
+
+- name: start podman
+  service:
+    name: podman
+    state: started
+
+- name: start docker
+  service:
+    name: docker
+    state: started
