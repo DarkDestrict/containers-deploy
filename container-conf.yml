@@ -1,0 +1,8 @@
+---
+- name: deploying container applications
+  hosts: all
+  become: true
+  gather_facts: true
+
+  roles:
+  - name: container-deploy
