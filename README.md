@@ -1,2 +1,2 @@
 # container-deploy
-for docker and podman deployment
+Docker and Podman deployment
