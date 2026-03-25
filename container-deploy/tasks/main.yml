@@ -1,28 +1,28 @@
 ---
 # tasks file for container-deploy
 
-- name: installing podman 
-  apt:
-    name: podman
-    state: latest
-  notify: "start podman"
+# - name: installing podman 
+#   apt:
+#     name: podman
+#     state: latest
+#   notify: "start podman"
 
-- name: install docker
-  apt:
-    name: docker.io
-    state: latest	
-  notify: "start docker"
+# - name: install docker
+#   apt:
+#     name: docker.io
+#     state: latest	
+#   notify: "start docker"
 
-- name: creating a directory to copy my ssh cont keys
-  file:
-    path: /root/containers
-    state: directory
+# - name: creating a directory to copy my ssh cont keys
+#   file:
+#     path: /root/containers
+#     state: directory
 
-- name: copying my keys to new folder containers
-  copy:
-    src: /root/container-deploy/files/*
-    dest: /root/containers
-    remote_src: yes
+# - name: copying my keys to new folder containers
+#   copy:
+#     src: /root/container-deploy/files/*
+#     dest: /root/containers
+#     remote_src: yes
 
 - name: create a user 
   user:
