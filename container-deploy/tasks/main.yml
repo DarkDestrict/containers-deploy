@@ -23,3 +23,9 @@
     src: /root/container-deploy/files/*
     dest: /root/containers
     remote_src: yes
+
+- name: create a user 
+  user:
+    name: admin
+    password: "{{ 'admin' | password_hash('sha512') }}"
+    shell: /bin/bash
